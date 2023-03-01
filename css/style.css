@@ -10,11 +10,6 @@ body, h1, h2, h3, p, ul, li {
 Typography
 ================= */
 
-/* 
-font-family: 'Lora', serif;
-font-family: 'Ubuntu', sans-serif;
-*/ 
-
 .header-text h1 {
   font: 33px/42px Lora;
   letter-spacing: 0px;
@@ -46,18 +41,12 @@ small {
 
 .blog-post-heading {
   font: normal normal normal 24px/28px Lora;
-  /*letter-spacing: 4.8px;*/ 
   color: #143774;  
 }
 
 .blog-post-text p, .main-about-me-text p {
   font: normal normal 300 18px/28px Ubuntu;
-  /*letter-spacing: 3.6px;*/
   color: #707070;
-}
-
-.blog-post-text b {
-  /* font-weight: bold */ 
 }
 
 .blog-post-text a {
@@ -68,7 +57,6 @@ small {
 a.continue-reading {
   font: normal normal bold 14px/28px Ubuntu;
   letter-spacing: 2px;
-  /*letter-spacing: 2.8px;*/
   color: #1792D2;
   text-transform: uppercase;
   text-decoration: none;
@@ -76,7 +64,6 @@ a.continue-reading {
 
 aside h2 {
   font: normal normal bold 18px/24px Ubuntu;
-  /*letter-spacing: 3.6px;*/
   color: #143774;
   text-transform: uppercase;  
 }
@@ -152,14 +139,14 @@ li {
   border-bottom: 2px solid #707070;
 }
 
+
 /* Main Content */ 
 
 main {
   padding: 70px 0;
 }
 
-.recent-post img, .blog-post img, .img-large {
-  max-width: 500px;
+.blog-post-img, .img-large {
   width: 100%;
   max-height: 300px;
   object-fit: cover;
@@ -189,11 +176,11 @@ main {
   margin: 20px 0;
 }
 
-.blog-post img {
+.blog-post-img {
   margin-bottom: 10px;
 }
 
-.blog-post-img {
+.blog-post-img-container {
   position: relative;
   max-width: 500px;
 }
@@ -321,17 +308,12 @@ Media Queries
     display: flex;
     gap: 50px;
   }
-  
-  aside {
-    margin-top: unset;
-    width: 240px;
-  }
 
   section {
     flex: 1;
   }
 
-  .recent-post img, .blog-post-img, .img-large {
+  .blog-post-img-container {
     max-width: unset;
   }
 
@@ -353,12 +335,17 @@ Media Queries
     letter-spacing: 2.8px;
   }
 
-  .blog-post img {
+  .blog-post-img {
     width: 198px;
     height: 242px;
   }
 
-  /* Sidebar */ 
+  /* Sidebar */   
+  aside {
+    margin-top: unset;
+    width: 240px;
+  }
+
   aside h2 {
     letter-spacing: 2px;
   }
